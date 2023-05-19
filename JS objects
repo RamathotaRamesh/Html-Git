@@ -1,0 +1,39 @@
+let mycontacts  =
+[
+    {
+        "name":"ramesh",
+        "location":"hyd",
+        "language":["Hindi","English","Telugu"]
+    },
+        {
+            "name":"Hari",
+            "location":"Andra",
+            "language":["English","Telugu"]
+        },
+            {
+                "name":"Nani",
+                "location":"goa",
+                "language":["Hindi","English"]
+            },
+                {
+                    "name":"Pavani",
+                    "location":"MP",
+                    "language":["Hindi","Telugu"]
+                },
+                    {
+                        "name":"Pavan",
+                        "location":"andra",
+                        "language":["Hindi","English","Telugu"]
+                    }
+];
+function profile(name,prop)
+{
+    for(var i=0;i<mycontacts.length;i++)
+    {
+        if(mycontacts[i].name==name)
+        {
+            return mycontacts[i][prop] || "No Property";
+        }
+    }
+}
+console.log(profile("Pavani","location"));
